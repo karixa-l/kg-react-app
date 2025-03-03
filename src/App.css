@@ -1,12 +1,31 @@
-
 .homepage {
-  background-image: url("https://k-g.wuaze.com/wp-content/uploads/2025/03/ella-jardim-M0zs81FNm6s-unsplash.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 100vh; /* Full screen height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(0, 0, 0);
+  padding: 20px;
+  background: #f4f4f4;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

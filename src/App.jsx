@@ -17,9 +17,9 @@ function App() {
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
-            <h2 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-            <p dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
-            <a href={post.link} target="_blank" rel="noopener noreferrer">
+            <h2>{post.title}</h2>
+            <p>{post.body}</p>
+            <a href={`https://jsonplaceholder.typicode.com/posts/${post.id}`} target="_blank" rel="noopener noreferrer">
               Read More
             </a>
           </li>
@@ -30,3 +30,4 @@ function App() {
 }
 
 export default App;
+

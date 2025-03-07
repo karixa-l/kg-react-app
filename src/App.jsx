@@ -2,10 +2,11 @@ const VideoBackground = () => {
   return (
     <div className="video-container">
       <iframe
-        src="https://www.youtube.com/embed/xNwQF0kYJjM?si=gNiYbEoS1iKxQLBQ&autoplay=1&mute=1&loop=1&playlist=xNwQF0kYJjM"
+        src="https://www.youtube.com/embed/xNwQF0kYJjM?si=Dmq4PVMr-vpO_3D8&controls=0"
         title="YouTube video player"
         frameBorder="0"
-        allow="autoplay; encrypted-media; fullscreen"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
       ></iframe>
     </div>
@@ -13,4 +14,3 @@ const VideoBackground = () => {
 };
 
 export default VideoBackground;
-

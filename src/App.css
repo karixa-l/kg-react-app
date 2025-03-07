@@ -5,11 +5,16 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  z-index: -1; /* Send it behind other content */
+  z-index: -1; /* Ensures the video stays behind other content */
 }
 
 .video-container iframe {
   position: absolute;
+  top: 50%;
+  left: 50%;
   width: 100vw;
-  height: 100vh;
+  height: 56.25vw; /* This keeps the aspect ratio at 16:9 */
+  min-height: 100vh;
+  min-width: 177.77vh; /* Ensures the video always covers the entire screen */
+  transform: translate(-50%, -50%); /* Centers the video */
 }

@@ -1,3 +1,8 @@
+// App.jsx
+import React from 'react';
+import './App.css'; // Import your existing App.css
+import './index.css'; // Import the index.css with the video container styles
+
 const VideoBackground = () => {
   return (
     <div className="video-container">
@@ -13,4 +18,14 @@ const VideoBackground = () => {
   );
 };
 
-export default VideoBackground;
+function App() {
+  return (
+    <div>
+      <VideoBackground />
+      <h1>Welcome to My Website</h1>
+      <button>Click me</button>
+    </div>
+  );
+}
+
+export default App;

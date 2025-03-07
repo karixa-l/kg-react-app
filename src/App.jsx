@@ -1,3 +1,5 @@
+import './VideoBackground.css';  // Import styles specific to the VideoBackground component
+
 const VideoBackground = () => {
   return (
     <div className="video-container">
@@ -14,4 +16,3 @@ const VideoBackground = () => {
 };
 
 export default VideoBackground;
-

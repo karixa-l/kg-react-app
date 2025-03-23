@@ -46,11 +46,14 @@ const ScrollSection = () => {
 const App = () => {
   return (
     <div className="app">
-      <VideoBackground />
-      <OverlayBlocks />
-      <ScrollSection />
+      <div className="hero-section">
+        <VideoBackground />
+        <OverlayBlocks />
+      </div>
+      <ScrollSection /> 
     </div>
   );
 };
+
 
 export default App;

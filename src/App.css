@@ -1,3 +1,22 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh; /* Full screen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scroll-section {
+  min-height: 100vh; /* Makes sure it's below */
+  background: #f0f0f0; /* Just for visibility */
+  padding: 2rem;
+}
+
 .video-container {
   position: fixed;
   top: 0;

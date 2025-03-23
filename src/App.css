@@ -1,3 +1,4 @@
+
 .app {
   display: flex;
   flex-direction: column;
@@ -11,10 +12,70 @@
   align-items: center;
   justify-content: center;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: #222;
+}
 .scroll-section {
-  min-height: 100vh; /* Makes sure it's below */
-  background: #f0f0f0; /* Just for visibility */
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 200vh; /* Double viewport height to allow scrolling */
+  padding-top: 100px;
+  position: relative;
+  overflow: hidden;
+}
+.parallax-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Make sure it takes full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 100px; /* Creates a depth effect */
+}
+.scroll-section ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.scroll-section ul li {
+  width: 300px;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  transform: translateY(var(--parallax-offset, 0));
+  transition: transform 0.2s ease-out;
+}
+
+/* Image Styling */
+.scroll-section ul li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Create the Parallax Effect */
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-section ul li:nth-child(1) { --parallax-offset: -10px; }
+  .scroll-section ul li:nth-child(2) { --parallax-offset: -20px; }
+  .scroll-section ul li:nth-child(3) { --parallax-offset: -30px; }
+  .scroll-section ul li:nth-child(4) { --parallax-offset: -40px; }
+  .scroll-section ul li:nth-child(5) { --parallax-offset: -50px; }
+  .scroll-section ul li:nth-child(6) { --parallax-offset: -60px; }
+  .scroll-section ul li:nth-child(7) { --parallax-offset: -70px; }
+  .scroll-section ul li:nth-child(8) { --parallax-offset: -80px; }
 }
 
 .video-container {
@@ -58,47 +119,4 @@
   border-radius: 5px;
   font-size: 14px;
   font-weight: bold;
-}
-.scroll-container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow-x: auto;
-  white-space: nowrap;
-  scroll-snap-type: x mandatory;
-  display: flex;
-  align-items: center;
-}
-
-.scroll-container h1 {
-  position: fixed;
-  top: 50%;
-  left: 2rem;
-  transform: translateY(-50%) rotate(-90deg);
-  font-size: 2rem;
-  color: white;
-}
-
-ul {
-  display: flex;
-  gap: 1rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  scroll-snap-type: x mandatory;
-  padding-inline: 50vw;
-}
-
-ul li {
-  flex: 0 0 300px;
-  height: 450px;
-  scroll-snap-align: center;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-ul li img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }

@@ -31,14 +31,18 @@ const OverlayBlocks = () => {
 const ScrollSection = () => {
   return (
     <div className="scroll-section">
-      <h1>scroll.</h1>
-      <ul>
-        {Array.from({ length: 10 }).map((_, index) => (
-          <li key={index}>
-            <img src={`https://picsum.photos/900/1200?random=${index + 1}`} alt="" />
-          </li>
-        ))}
-      </ul>
+      <div className="parallax-wrapper">
+        <ul>
+          {Array.from({ length: 8 }).map((_, index) => (
+            <li key={index}>
+              <img
+                src={`https://picsum.photos/900/1200?random=${index + 1}`}
+                alt=""
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

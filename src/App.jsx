@@ -48,7 +48,7 @@ const App = () => {
     <div className="app">
       <VideoBackground />
       <OverlayBlocks />
-      <ScrollableGallery />
+      <ScrollSection />
     </div>
   );
 };
